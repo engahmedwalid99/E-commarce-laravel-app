@@ -2,9 +2,9 @@
 
 <div align="center">
 
-### 🚀 A Modern E-Commerce Web Application Built with Laravel
+### 🚀 Modern Full-Stack E-Commerce Platform Built with Laravel
 
-A full-stack e-commerce application built with **Laravel, PHP, MySQL, Blade, Tailwind CSS, and JavaScript**.
+A complete e-commerce web application built with **Laravel 12, PHP, MySQL, Blade, Tailwind CSS, JavaScript, and Vite**.
 
 </div>
 
@@ -12,47 +12,176 @@ A full-stack e-commerce application built with **Laravel, PHP, MySQL, Blade, Tai
 
 ## 📌 About The Project
 
-**E-Commerce Laravel App** is a modern online shopping platform built with Laravel.
+**E-Commerce Laravel Application** is a full-stack e-commerce platform built with **Laravel 12**.
 
-The project provides a complete foundation for an e-commerce system, including user authentication, product management, newsletter subscriptions, database management, and a seller dashboard.
+The project is designed to provide a complete shopping platform with multiple user roles and dedicated dashboards for **Administrators, Sellers, and Users**.
 
-The project is designed with a clean and responsive interface and follows Laravel's MVC architecture.
+It includes a complete authentication system, social authentication, passwordless login, user profile management, product management, seller dashboard, admin dashboard, newsletter subscriptions, email notifications, validation, and role-based functionality.
+
+The application follows the **Laravel MVC architecture** and uses Laravel Form Requests for validation and Eloquent Models for database interaction.
 
 ---
 
-## ✨ Features
+# ✨ Features
 
-* 🔐 User Authentication
+## 🔐 Authentication
+
+The application includes a complete authentication system:
+
+* 🔑 Traditional Login
+* 📝 User Registration
+* 🔒 Password Update
+* 🔄 Forgot Password
+* 🚪 Logout
+* 🔗 Passwordless Login using a secure login link
+* 📧 Email notifications for authentication events
+* 🛡️ Form Request Validation
+* 🤖 Google reCAPTCHA v3
+
+---
+
+## 🌐 Social Authentication
+
+Users can authenticate using external social providers through **Laravel Socialite**:
+
+* 🔵 Google Login
+* 🔷 Facebook Login
+* ⚫ GitHub Login
+
+---
+
+## 👤 User Features
+
+Registered users have access to their personal account:
+
 * 👤 User Profile
-* 🛍️ Product Management
-* ➕ Add Products
-* 🧑‍💼 Seller Dashboard
-* 📧 Newsletter Subscription
-* 🚫 Prevent Duplicate Newsletter Emails
-* 🗄️ MySQL Database
-* ✅ Form Request Validation
-* 🎨 Responsive UI
-* ⚡ Laravel Blade Templates
-* 📱 Mobile-Friendly Design
-* 🔒 CSRF Protection
-* 🧩 Laravel MVC Architecture
+* ✏️ Edit Profile Information
+* 🔐 Change Password
+* 📧 Manage Account Email
+* 🚪 Logout
+* 🛍️ Browse Products
+* 🔎 View Product Details
 
 ---
 
-## 🛠️ Technologies Used
+## 🧑‍💼 Seller Dashboard
 
-| Technology      | Usage                 |
-| --------------- | --------------------- |
-| 🐘 PHP          | Backend               |
-| 🚀 Laravel      | PHP Framework         |
-| 🗄️ MySQL       | Database              |
-| 🎨 Blade        | Frontend Templates    |
-| 💨 Tailwind CSS | UI Styling            |
-| ⚡ JavaScript    | Frontend Interactions |
-| 📦 Composer     | PHP Dependencies      |
-| 📦 NPM          | Frontend Dependencies |
-| 🔧 Vite         | Frontend Build Tool   |
-| 🐙 Git & GitHub | Version Control       |
+Sellers have their own dedicated dashboard.
+
+Features include:
+
+* 📊 Seller Dashboard
+* ➕ Add New Products
+* 🛍️ Product Management
+* 📝 Product Validation
+* 📦 Store Product Information
+* 🖥️ Dedicated Seller Interface
+
+---
+
+## 👨‍💻 Admin Dashboard
+
+Administrators have access to a dedicated administration panel.
+
+Admin features include:
+
+* 📊 Admin Dashboard
+* 👥 View Users
+* 🧑‍💼 View Sellers
+* ➕ Add New Admin
+* 🗑️ Delete Users
+* 🔄 Update User Roles
+* 📧 Invite Users to Become Admins
+
+---
+
+## 🛍️ Products
+
+The application includes a product system with:
+
+* 📋 Products Listing
+* 🔎 Product Details
+* ➕ Add Products
+* 🗄️ Database Product Storage
+* 🖼️ Product Image/File Support
+* ✅ Product Validation
+
+---
+
+## 📧 Newsletter
+
+The application includes a newsletter subscription system.
+
+Features:
+
+* 📩 Subscribe using email
+* ✅ Email validation
+* 🚫 Prevent duplicate email subscriptions
+* 🗄️ Store newsletter subscribers in MySQL
+* ⚠️ Display validation messages when an email already exists
+
+Each email address can be registered for the newsletter only once.
+
+---
+
+## 📬 Email System
+
+The application includes email functionality for important user actions.
+
+Email templates include:
+
+* ✉️ Registration Email
+* 🔐 Login Notification Email
+* 👨‍💼 Admin Invitation Email
+
+---
+
+# 🛡️ Security & Validation
+
+The project uses several Laravel security and validation features:
+
+* 🔒 CSRF Protection
+* ✅ Laravel Form Requests
+* 🔐 Password Authentication
+* 🔗 Secure Passwordless Login
+* 🤖 Google reCAPTCHA v3
+* 🛡️ Role-based Access
+* 🚫 Duplicate Email Prevention
+* 🔑 Environment Variables for Sensitive Configuration
+
+---
+
+# 🛠️ Technologies Used
+
+| Technology           | Usage                          |
+| -------------------- | ------------------------------ |
+| 🐘 PHP 8.2+          | Backend Programming            |
+| 🚀 Laravel 12        | Application Framework          |
+| 🗄️ MySQL            | Database                       |
+| 🎨 Blade             | Server-Side Templates          |
+| 💨 Tailwind CSS      | UI & Styling                   |
+| ⚡ JavaScript         | Frontend Interactions          |
+| 🔧 Vite              | Frontend Build Tool            |
+| 📦 Composer          | PHP Dependency Management      |
+| 📦 NPM               | Frontend Dependency Management |
+| 🔐 Laravel Socialite | Social Authentication          |
+| 🤖 reCAPTCHA v3      | Bot Protection                 |
+| 🐙 Git & GitHub      | Version Control                |
+
+---
+
+# 📦 Main Laravel Packages
+
+The project currently uses packages including:
+
+* `laravel/framework`
+* `laravel/socialite`
+* `josiasmontag/laravel-recaptchav3`
+* `laravel/tinker`
+* `laravel/pail`
+* `laravel/pint`
+* `fakerphp/faker`
+* `phpunit/phpunit`
 
 ---
 
@@ -63,8 +192,23 @@ E-commerce-laravel-app/
 │
 ├── app/
 │   ├── Http/
-│   ├── Models/
-│   └── ...
+│   │   ├── Controllers/
+│   │   │   ├── Admin/
+│   │   │   ├── Auth/
+│   │   │   ├── News/
+│   │   │   ├── home/
+│   │   │   └── products/
+│   │   │
+│   │   └── Requests/
+│   │       ├── Admin/
+│   │       ├── Auth/
+│   │       ├── News/
+│   │       └── products/
+│   │
+│   └── Models/
+│       ├── User.php
+│       ├── products.php
+│       └── newsletter.php
 │
 ├── bootstrap/
 │
@@ -72,17 +216,23 @@ E-commerce-laravel-app/
 │
 ├── database/
 │   ├── migrations/
-│   ├── seeders/
-│   └── factories/
+│   └── seeders/
 │
 ├── public/
 │
 ├── resources/
-│   ├── css/
-│   ├── js/
 │   └── views/
+│       ├── Auth/
+│       ├── Extends/
+│       ├── Mails/
+│       ├── Roles/
+│       ├── products/
+│       ├── home.blade.php
+│       ├── Products.blade.php
+│       └── Profile.blade.php
 │
 ├── routes/
+│   └── web.php
 │
 ├── storage/
 │
@@ -98,17 +248,116 @@ E-commerce-laravel-app/
 
 ---
 
+# 👥 User Roles
+
+The application is built around three main roles:
+
+```text
+                    E-Commerce Application
+                            │
+             ┌──────────────┼──────────────┐
+             │              │              │
+           Admin          Seller          User
+             │              │              │
+       Admin Dashboard  Seller Dashboard  Profile
+       Manage Users     Add Products      Products
+       Manage Sellers   Products          Product Details
+       Add Admins
+       Update Roles
+       Delete Users
+```
+
+### 👨‍💻 Admin
+
+Administrators can manage users, sellers, roles, and other administrative functionality.
+
+### 🧑‍💼 Seller
+
+Sellers have access to their dashboard and can add products to the platform.
+
+### 👤 User
+
+Regular users can register, login, manage their profile, browse products, and access the available shopping functionality.
+
+---
+
+# 🌐 Main Routes
+
+The application currently includes routes for:
+
+### 🏠 Main Application
+
+```text
+/
+products
+product-details/{id}
+profile
+user-dashboard
+```
+
+### 🔐 Authentication
+
+```text
+/login
+/register
+/forget-password
+/Login-without-password
+/Login-without-password/{user}
+```
+
+### 🌐 Social Login
+
+```text
+/auth/{driver}/redirect
+/auth/{driver}/callback
+```
+
+Supported providers include:
+
+```text
+Google
+Facebook
+GitHub
+```
+
+### 👨‍💻 Admin
+
+```text
+/admin-dashboard
+/admin-dashboard/users
+/admin-dashboard/sellers
+/admin-dashboard/add-admin
+/admin-dashboard/delete-user/{id}
+/admin-dashboard/update-user-role/{id}
+```
+
+### 🧑‍💼 Seller
+
+```text
+/seller-dashboard
+/seller-dashboard/add-product
+```
+
+### 📧 Newsletter
+
+```text
+/subscribe
+```
+
+---
+
 # 💻 Requirements
 
-Before running the project, make sure you have installed:
+Before installing the project, make sure you have:
 
 * PHP 8.2 or higher
 * Composer
 * MySQL
-* Node.js & NPM
+* Node.js
+* NPM
 * Git
 
-You can check your installed versions using:
+Check your installed versions:
 
 ```bash
 php -v
@@ -142,7 +391,7 @@ Open your terminal and run:
 git clone https://github.com/engahmedwalid99/E-commarce-laravel-app.git
 ```
 
-Then enter the project directory:
+Enter the project directory:
 
 ```bash
 cd E-commarce-laravel-app
@@ -152,8 +401,6 @@ cd E-commarce-laravel-app
 
 ## 2. Install PHP Dependencies
 
-Run:
-
 ```bash
 composer install
 ```
@@ -162,17 +409,13 @@ composer install
 
 ## 3. Install Frontend Dependencies
 
-Run:
-
 ```bash
 npm install
 ```
 
 ---
 
-## 4. Create the Environment File
-
-Copy the example environment file:
+## 4. Create `.env`
 
 ### Windows
 
@@ -188,9 +431,7 @@ cp .env.example .env
 
 ---
 
-## 5. Generate Laravel Application Key
-
-Run:
+## 5. Generate Application Key
 
 ```bash
 php artisan key:generate
@@ -198,9 +439,9 @@ php artisan key:generate
 
 ---
 
-# 🗄️ Database Setup
+# 🗄️ Database Configuration
 
-Create a new MySQL database.
+Create a MySQL database.
 
 For example:
 
@@ -208,7 +449,7 @@ For example:
 ecommerce
 ```
 
-Then open your `.env` file and configure your database:
+Then configure your `.env` file:
 
 ```env
 DB_CONNECTION=mysql
@@ -219,11 +460,65 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-> Change the database username and password according to your local MySQL configuration.
+> Update the database username and password according to your MySQL configuration.
 
 ---
 
-## 6. Run Database Migrations
+# 🔑 Authentication Configuration
+
+If you want to use social authentication, configure the required credentials in `.env`.
+
+Example:
+
+```env
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+GOOGLE_REDIRECT_URI=
+
+FACEBOOK_CLIENT_ID=
+FACEBOOK_CLIENT_SECRET=
+FACEBOOK_REDIRECT_URI=
+
+GITHUB_CLIENT_ID=
+GITHUB_CLIENT_SECRET=
+GITHUB_REDIRECT_URI=
+```
+
+---
+
+# 🤖 reCAPTCHA Configuration
+
+The project uses **Google reCAPTCHA v3**.
+
+Add your reCAPTCHA credentials to `.env` according to your configured keys:
+
+```env
+RECAPTCHAV3_SITEKEY=
+RECAPTCHAV3_SECRET=
+```
+
+---
+
+# 📧 Mail Configuration
+
+Some application features send emails, including registration, login notifications, passwordless login, and admin invitations.
+
+Configure your mail settings in `.env`:
+
+```env
+MAIL_MAILER=
+MAIL_HOST=
+MAIL_PORT=
+MAIL_USERNAME=
+MAIL_PASSWORD=
+MAIL_ENCRYPTION=
+MAIL_FROM_ADDRESS=
+MAIL_FROM_NAME=
+```
+
+---
+
+# 🗃️ Run Database Migrations
 
 Run:
 
@@ -231,13 +526,13 @@ Run:
 php artisan migrate
 ```
 
-If the project contains seeders and you want to insert sample data:
+If you want to reset the database and run all migrations again:
 
 ```bash
-php artisan db:seed
+php artisan migrate:fresh
 ```
 
-Or:
+If seed data is available:
 
 ```bash
 php artisan migrate --seed
@@ -247,7 +542,7 @@ php artisan migrate --seed
 
 # 🔗 Storage Link
 
-If the application uses uploaded files or images, run:
+If the application uses uploaded files or images:
 
 ```bash
 php artisan storage:link
@@ -255,9 +550,9 @@ php artisan storage:link
 
 ---
 
-# 🎨 Run the Frontend
+# 🎨 Run Frontend
 
-During development, run:
+For development:
 
 ```bash
 npm run dev
@@ -267,7 +562,7 @@ Keep this terminal running.
 
 ---
 
-# 🚀 Run Laravel
+# 🚀 Start Laravel
 
 Open another terminal and run:
 
@@ -275,7 +570,7 @@ Open another terminal and run:
 php artisan serve
 ```
 
-The application will usually be available at:
+The application will normally be available at:
 
 ```text
 http://127.0.0.1:8000
@@ -287,7 +582,7 @@ Open the URL in your browser.
 
 # ⚡ Quick Start
 
-If everything is already installed, you can use:
+After cloning the project, you can run:
 
 ```bash
 git clone https://github.com/engahmedwalid99/E-commarce-laravel-app.git
@@ -309,7 +604,7 @@ php artisan storage:link
 npm run dev
 ```
 
-Then, in another terminal:
+Then open another terminal:
 
 ```bash
 php artisan serve
@@ -317,35 +612,77 @@ php artisan serve
 
 ---
 
-# 🔐 Environment Variables
+# 🔐 Environment & Security
 
-Never upload your real `.env` file to GitHub.
+**Never upload your real `.env` file to GitHub.**
 
-The project uses:
+The `.env` file may contain sensitive information such as:
 
-```text
-.env
-```
+* Database credentials
+* Application keys
+* Mail credentials
+* Google credentials
+* Facebook credentials
+* GitHub credentials
+* reCAPTCHA secret keys
 
-for local/private configuration.
-
-The repository only contains:
+The repository contains:
 
 ```text
 .env.example
 ```
 
-as a template.
+which should be used as a template.
+
+---
+
+# 📸 Application Pages
+
+The project includes multiple interfaces and pages:
+
+### Public Pages
+
+* 🏠 Home
+* 🛍️ Products
+* 🔎 Product Details
+* 📧 Newsletter Subscription
+
+### Authentication Pages
+
+* 🔐 Login
+* 📝 Register
+* 🔑 Forgot Password
+* 🔗 Passwordless Login
+* 🔐 Update Password
+
+### User Pages
+
+* 👤 Profile
+* ✏️ Edit Profile
+* 🔐 Update Password
+* 👤 User Dashboard
+
+### Seller Pages
+
+* 🧑‍💼 Seller Dashboard
+* ➕ Add Product
+
+### Admin Pages
+
+* 👨‍💻 Admin Dashboard
+* 👥 Users
+* 🧑‍💼 Sellers
+* ➕ Add Admin
 
 ---
 
 # 👨‍💻 Developer
 
-**Ahmed Walid**
+### Ahmed Walid
 
-Full Stack Developer
+**Full Stack Developer**
 
-### GitHub
+GitHub:
 
 https://github.com/engahmedwalid99
 
@@ -353,7 +690,7 @@ https://github.com/engahmedwalid99
 
 # 📌 Repository
 
-You can find the source code here:
+Source Code:
 
 https://github.com/engahmedwalid99/E-commarce-laravel-app
 
@@ -361,37 +698,38 @@ https://github.com/engahmedwalid99/E-commarce-laravel-app
 
 # 🤝 Contributing
 
-Contributions are welcome.
+Contributions, improvements, and suggestions are welcome.
 
-If you want to improve the project:
+### 1. Fork the repository
 
-1. Fork the repository.
-2. Create a new branch.
+### 2. Create a new branch
 
 ```bash
 git checkout -b feature/new-feature
 ```
 
-3. Make your changes.
-4. Commit your changes.
+### 3. Make your changes
+
+### 4. Commit your changes
 
 ```bash
+git add .
 git commit -m "Add new feature"
 ```
 
-5. Push the branch.
+### 5. Push your branch
 
 ```bash
 git push origin feature/new-feature
 ```
 
-6. Open a Pull Request.
+### 6. Open a Pull Request
 
 ---
 
 # ⭐ Support
 
-If you like this project, consider giving the repository a ⭐ on GitHub.
+If you find this project useful or interesting, consider giving the repository a ⭐ on GitHub.
 
 ---
 
